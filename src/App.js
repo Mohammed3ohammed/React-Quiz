@@ -1,9 +1,11 @@
 import React from "react";
+import Header from "./components/Header";
 
-export default function () {
+
+export default function app() {
   return (
-    <>
-    Hallo World
-    </>
+    <div className="app">
+      <Header />
+    </div>
   )
 }
