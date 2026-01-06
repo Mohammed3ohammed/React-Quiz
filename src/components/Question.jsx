@@ -1,6 +1,6 @@
 import Options from "./Options";
 
-function Question({question}) {
+function Question ({question}) {
     return (
         <div>
             <h4>{question.question}</h4>
