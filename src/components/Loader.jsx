@@ -5,5 +5,5 @@ export default function Loader () {
             <p>Loading questions...</p>
             </div>
         </div>
-    )
+    );
 }
