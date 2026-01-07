@@ -1,9 +1,14 @@
 import Error from "./Error";
+import FinishScreen from "./FinishScreen";
+import Footer from "./Footer";
 import Header from "./Header";
 import Loader from "./Loader";
 import Main from "./Main";
+import NextButton from "./NextButton";
+import Progress from "./Progress";
 import Question from "./Question";
 import StartScreen from "./StartScreen";
+import Timer from "./Timer";
 
 export default function App() {
   const { status } = useQuiz();

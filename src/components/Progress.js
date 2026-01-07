@@ -1,6 +1,6 @@
 import { useQuiz } from "../contexts/QuizContext";
 
-function Progress() {
+function Progress () {
     const { index, numQuestions, points, maxPossiblePoints, answer } = useQuiz();
 
   return (
@@ -18,4 +18,4 @@ function Progress() {
   )
 }
 
-export default Progress
+export default Progress;
