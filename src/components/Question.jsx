@@ -2,6 +2,7 @@ import Options from "./Options";
 import { useQuiz } from "../contexts/QuizContext";
 
 function Question () {
+    
     const { questions, index } = useQuiz();
     const question = questions.at(index);
     console.log(question);

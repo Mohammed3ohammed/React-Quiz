@@ -83,12 +83,24 @@ function QuizProvider ({ children }) {
     0
   );
 
-  useEffect(function () {
-    fetch("http://localhost:9000/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
-  }, []);
+  // useEffect(function () {
+  //   fetch("http://localhost:9000/questions")
+  //     .then((res) => res.json())
+  //     .then((data) => dispatch({ type: "dataReceived", payload: data }))
+  //     .catch((err) => dispatch({ type: "dataFailed" }));
+  // }, []);
+
+  useEffect(() => {
+  fetch("http://localhost:9000/questions")
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to fetch");
+      return res.json();
+    })
+    .then((data) =>
+      dispatch({ type: "dataReceived", payload: data })
+    )
+    .catch(() => dispatch({ type: "dataFailed" }));
+}, [dispatch]);
 
   return (
     <QuizContext.Provider

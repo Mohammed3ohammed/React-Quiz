@@ -3,7 +3,7 @@ import { useQuiz } from "../contexts/QuizContext";
 
 
 
-function Timer () {
+function Timer() {
     const { dispatch, secondsRemaining } = useQuiz();
 
     const mins = Math.floor(secondsRemaining / 60);

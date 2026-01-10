@@ -22,7 +22,7 @@ function reducer (state, action) {
     }
 }
 
-function DateCounter () {
+function DateCounter() {
     const [state, dispatch] = useReducer(reducer, initialState);
     const {count, step} = state;
 
